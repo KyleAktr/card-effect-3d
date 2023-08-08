@@ -1,0 +1,47 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28,29,30);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+
+    height: 400px;
+    perspective: 1000px;
+}
+
+.content-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: all 0.15s ease-out;
+}
+
+.content-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.15s ease-out;
+    border-radius: 25px;
+    mix-blend-mode: hard-light;
+    background: radial-gradient(circle at 50% 0%, rgb(173, 190, 212), transparent);
+}
